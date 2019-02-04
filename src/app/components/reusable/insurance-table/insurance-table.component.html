@@ -1,0 +1,32 @@
+<div class="row animated fadeIn">
+    <div class="col-12">
+        <div class="card">
+            <div *ngIf="insurances.length <= 0" class="text-center">
+                Waiting for search request ...
+            </div>
+            <div class="row" *ngFor="let item of insurances">
+
+                <div class="col-12">
+                    <div class="card">
+                        <div class="card-body">
+                            <div class="row">
+                                <div class="col-md-2">
+                                    <img style="width: 100%" [src]="item['brandImage'] | image: 'brand' ">
+                                </div>
+                                <div class="col-md-10">
+                                    <h2 class="card-title center text-danger">{{ item.price }} €
+                                        <img class="ml-3" style="max-width: 25px;" [src]="item['kindImage'] | image: 'kind'"> {{ item.kind }}
+                                        <i (click)="addToFavorites(item)" class="far fa-star float-right text-success pointer"></i>
+                                    </h2>
+
+                                    <h5 style="margin-bottom: 0;">{{ item.name }}</h5>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </div>
+</div>

@@ -1,0 +1,19 @@
+<div class="container">
+    <div class="row animated fadeIn mt-5">
+        <div class="col-md-2 hidden-sm-down ">
+            <div class="card">
+                <app-filters></app-filters>
+            </div>
+        </div>
+        <div class="col-md-10 col-xs-12 ">
+            <div class="card">
+                <div class="card-body">
+                        <button class="btn btn-primary float-right" (click)="showFavorites()">Favorites</button>
+                    <h3 class="card-title"> Total Insurances ( <small>{{ Insurances.length }} </small> )</h3>
+                    
+                    <app-insurance-table></app-insurance-table>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

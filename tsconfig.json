@@ -1,6 +1,8 @@
 {
   "compileOnSave": false,
   "compilerOptions": {
+    //Para poder leer json con TS 2.9
+    "resolveJsonModule": true, "esModuleInterop": true ,
     "baseUrl": "./",
     "outDir": "./dist/out-tsc",
     "sourceMap": true,
